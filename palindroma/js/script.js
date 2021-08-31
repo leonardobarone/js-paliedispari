@@ -15,11 +15,11 @@ function palindroma(string) {
 
         if (string[i] == string[string.length - 1 - i]) {
             control = true;
-            return  'è palindroma'; break
+            return  'è palindroma'
         }
     }
         if (control == false) {
-            return 'non è palondroma'
+            return 'non è palindroma'
         }
 
 }
