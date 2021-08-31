@@ -7,21 +7,17 @@ while (!isNaN(parola)) {
 }
 
 // CREA UNA FUNZIONE PER CAPIRE SE LA PAROLA INSERITA È PALINDROMA
-function palindroma(string) {
-    
-    var control = false;
+function palindroma(stringa) {
 
-    for (var i = 0; i < string.length / 2; i++) {
+    var stringaArray = stringa.split("");
+    var stringaArrayReverse = stringaArray.reverse();
+    var stringaContraria = stringaArrayReverse.join("");
 
-        if (string[i] == string[string.length - 1 - i]) {
-            control = true;
-            return  'è palindroma'
-        }
+    if (stringaContraria == stringa) {
+        return "è palindroma";
+    } else {
+        return "non è palindroma"
     }
-        if (control == false) {
-            return 'non è palindroma'
-        }
-
 }
 
 console.log(palindroma(parola));
