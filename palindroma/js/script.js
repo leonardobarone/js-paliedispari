@@ -2,7 +2,8 @@
 
 // CHIEDERE ALL'UTENTE DI INSERIRE UNA PAROLA
 var parola = prompt("inserisci una parola").toLowerCase();
-while (!isNaN(parola)) {
+
+while (!isNaN(parola) && parola != null) {
     var parola = prompt("inserisci una parola").toLowerCase();
 }
 
@@ -26,7 +27,7 @@ function palindroma(stringa) {
         
     var parolaCapovolta = "";
         
-        for (var i = parola.length - 1; i >= 0; i--) {
+        for (var i = stringa.length - 1; i >= 0; i--) {
         
             parolaCapovolta += parola[i];
 
