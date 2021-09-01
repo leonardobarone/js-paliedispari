@@ -7,17 +7,34 @@ while (!isNaN(parola)) {
 }
 
 // CREA UNA FUNZIONE PER CAPIRE SE LA PAROLA INSERITA È PALINDROMA
-function palindroma(stringa) {
+// function palindroma(stringa) {
 
-    var stringaArray = stringa.split("");
-    var stringaArrayReverse = stringaArray.reverse();
-    var stringaContraria = stringaArrayReverse.join("");
+//     var stringaArray = stringa.split("");
+//     var stringaArrayReverse = stringaArray.reverse();
+//     var stringaContraria = stringaArrayReverse.join("");
 
-    if (stringaContraria == stringa) {
-        return "è palindroma";
-    } else {
-        return "non è palindroma"
-    }
-}
+//     if (stringaContraria == stringa) {
+//         return "è palindroma";
+//     } else {
+//         return "non è palindroma"
+//     }
+// }
 
 console.log(palindroma(parola));
+
+function palindroma(stringa) {
+        
+    var parolaCapovolta = "";
+        
+        for (var i = parola.length - 1; i >= 0; i--) {
+        
+            parolaCapovolta += parola[i];
+
+        }
+
+        if ( parolaCapovolta == stringa) {
+            return "è palindroma"
+        } else {
+            return "non è palindroma"
+        }
+}
